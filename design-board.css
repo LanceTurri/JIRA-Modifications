@@ -1,0 +1,315 @@
+/********************************************************
+ *
+ *  Let's remove some elements to begin.
+ *
+ ********************************************************/
+
+/* Remove Agile Section on JIRA Details Section */
+#greenhopper-agile-issue-web-panel {
+  display: none;
+}
+
+/* Hide Worklog Modules on JIRA Details Section */
+#tempo-worklogs-module {
+  display: none;
+}
+
+/* Hide top JIRA Logo because seriously... */
+h1#logo {
+  display: none;
+}
+
+/* Hide help button. I don't need your help! */
+#system-help-menu {
+  display: none;
+}
+
+/* Specific Columns that I don't care about. */
+#ghx-work [data-column-id="188"],
+#ghx-work [data-id="188"]{
+  display: none;
+}
+
+/* Hide superflous quick filters, because why don't I know what I'm supposed to be doing. */
+dd a[title="Due in 1 week"],
+dd a[title="Due in 2 weeks"],
+dd a[title="Due in 4 weeks"],
+dd a[title="No due date"],
+dd a[title="Internal tasks for sales and marketing, etc."],
+dd a[title="Displays issues which have been updated in the last day"] {
+  display: none !important;
+}
+
+/* Hide Tools listing at the top to the left of the board name */
+#ghx-modes-tools {
+  display: none;
+}
+
+.ghx-issue.ghx-has-avatar .ghx-avatar {
+  border-radius: 30px;
+}
+
+.ghx-swimlane-header:after {
+  display: none;
+}
+
+.ghx-release {
+  display: none;
+}
+
+.ghx-column .ghx-issue .ghx-days {
+  display: none;
+}
+
+.ghx-type img,
+.ghx-priority img {
+  display: none !important;
+}
+
+
+/********************************************************
+ *
+ *  Restructure the page
+ *
+ ********************************************************/
+
+#ghx-classification-menu-column,
+#ghx-version-column,
+#ghx-epic-column,
+#ghx-backlog-column,
+#ghx-detail-view,
+#ghx-pool-column {
+  display: block;
+}
+
+/* Column Headers */
+#ghx-column-header-group.ghx-fixed {
+  background: #fff;
+  z-index: 1;
+}
+
+
+#ghx-detail-view {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 30;
+  width: 100% !important;
+  border: 1px solid #ccc;
+  border-left: none;
+}
+
+#ghx-detail-contents {
+  width: 85%;
+  display: block;
+  margin: 5% auto;
+  height: 85%;
+  opacity: 1;
+  background: #ffffff;
+}
+
+.ghx-header {
+  background: none !important;
+}
+  .ghx-header h3 {
+    font-size: 24px !important;
+    color: #464a53 !important;
+    background: transparent !important;
+  }
+
+.ghx-detail-issue {
+  height: 95%;
+}
+
+/* Move Quick Filters to same line as Board title */
+#ghx-controls-work {
+  float: right;
+  margin-top: -40px;
+}
+
+/* Change itembox on task screen */
+.ghx-issue.ghx-issue-subtask .ghx-issue-content .ghx-issue-fields {
+  padding-right: 0px;
+}
+
+.ghx-column .ghx-parent-group .ghx-issue,
+.ghx-column .ghx-parent-group .ghx-issue:first-child,
+.ghx-column .ghx-parent-group.ghx-away:first-child,
+.ghx-column .ghx-issue:first-child {
+  margin-top: 0px;
+}
+
+.ghx-parent-stub,
+.ghx-parent-stub .ghx-group {
+  border-top: none;
+}
+
+.ghx-parent-stub .ghx-group .ghx-key,
+#ghx-column-headers .ghx-column {
+  text-align: center;
+}
+
+.ghx-subtask-group .ghx-issue {
+  margin-left: 0px;
+}
+
+.ghx-controls-filters {
+  margin-right: 0px !important;
+}
+
+/* Remove grey key on parent on task view */
+.ghx-parent-stub .ghx-group .ghx-key {
+  border-left: none;
+}
+
+.ghx-column .ghx-issue .ghx-issue-content {
+  padding-bottom: 20px !important;
+  padding-left: 15px !important;
+  font-size: 12px;
+}
+  .ghx-column .ghx-issue .ghx-flags {
+    bottom: 0 !important;
+    top: initial;
+    left: 32px;
+  }
+  .ghx-column .ghx-issue .ghx-type {
+    top: initial;
+    bottom: 0;
+  }
+
+/*******************************************************
+ *
+ * Rounded Corners
+ *
+ *******************************************************/
+.ghx-column .ghx-issue {
+  border-radius: 5px;
+}
+
+.ghx-column .ghx-parent-group.ghx-away .ghx-subtask-group .ghx-issue {
+  border-radius: 0 0 5px 5px;
+}
+
+.ghx-parent-stub,
+.ghx-parent-stub .ghx-group,
+.ghx-column .ghx-parent-group.ghx-away{
+  border-radius: 5px 5px 0 0;
+}
+
+
+
+/*******************************************************
+ *
+ * Dark Theme - Mainly for the Agile board.
+ *
+ *******************************************************/
+
+
+/* Background  and border colors */
+#ghx-pool,
+#ghx-column-header-group.ghx-fixed {
+  background: #292e34 !important;
+}
+
+#ghx-work .ghx-column {
+  background: #31353e;
+  border-color: #cfcabc;
+}
+
+#ghx-detail-view.ghx-detail-view {
+  background-color: rgba(48,47,48,0.9);
+}
+
+.ghx-parent-stub .ghx-group {
+  background: #e7e3d8 !important;
+  cursor: pointer;
+}
+
+#ghx-detail-contents {
+  background: #e7e3d8 !important;
+}
+
+#ghx-header {
+  background: #292e34;
+}
+
+#ghx-plan, #ghx-work, #ghx-report-scrollarea {
+  border-top: 1px solid #666666 !important;
+}
+
+.ghx-detail-nav-item .ghx-selected {
+  background: #e7e3d8 !important;
+}
+
+.ghx-issue + .ghx-issue .ghx-issue-content {
+  border-top: 1px solid #31353e;
+}
+
+
+
+/* Font colors */
+#ghx-column-headers.ghx-column-headers .ghx-column h2 {
+  color: #cfcabc;
+}
+
+#ghx-view-selector #ghx-board-name {
+  color: #f5f5f5;
+}
+
+.ghx-parent-stub .ghx-group .ghx-summary {
+  color: #464a53 !important;
+}
+
+.ghx-heading {
+  color: #f5f5f5 !important;
+}
+
+#ghx-column-headers .ghx-column h2 {
+  color: #f5f5f5;
+}
+
+.ghx-column .ghx-issue .ghx-key a {
+  color: #464a53;
+}
+
+
+
+/* Change task flag colors on left */
+.ghx-grabber[style*="background-color:#cc0000;"] {
+  background-color: #d23600 !important;
+  border-radius: 0 0 0 5px;
+}
+
+.ghx-grabber[style*="background-color:#ff9933;"] {
+  background-color: #de6d00 !important;
+  border-radius: 0 0 0 5px;
+}
+
+.ghx-grabber[style*="background-color: #ffdd33;"] {
+  background-color: #fca600 !important;
+  border-radius: 0 0 0 5px;
+}
+
+.ghx-grabber[style*="background-color:#eeeeee;"] {
+  background-color: #f5f5f5 !important;
+  border-radius: 0 0 0 5px;
+}
+
+
+
+/* Change priority arrow icons color */
+
+/* Medium Priority - Orange */
+.ghx-priority[title="SEV 3 - Medium"] {
+  color: #cc0000;
+}
+
+/* Space items better on task screen. */
+.ghx-column .ghx-parent-group.ghx-away,
+.ghx-column .ghx-issue {
+  margin-top: 20px;
+  background: #cfcabc;
+  border: none;
+}
