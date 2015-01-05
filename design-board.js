@@ -17,6 +17,10 @@ function delayClickLoading () {
 
 function clickLoading() {
     jQuery(function() {
+        // First, there was a new font
+        var font = '<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">'
+        jQuery('head').append(font);
+
         // Let's get font-awesome up in here!
         var awesomey = '<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">';
         jQuery('head').append(awesomey);
@@ -26,7 +30,7 @@ function clickLoading() {
         jQuery('.ghx-type[title="Feature Request"]').addClass('fa fa-fw fa-magic');
         jQuery('.ghx-type[title="Sub-task"]').addClass('fa fa-fw fa-code-fork');
         jQuery('.ghx-type[title="Story"]').addClass('fa fa-fw fa-book');
-        jQuery('.ghx-type[title="Improvement"]').addClass('fa fa-fw fa-line-chart');
+        jQuery('.ghx-type[title="Improvement"]').addClass('fa fa-fw fa-thumbs-up');
         jQuery('.ghx-type[title="Configuration Change"]').addClass('fa fa-fw fa-gear');
 
         // Icons EVERYWHERE!
@@ -41,11 +45,11 @@ function clickLoading() {
             taskTitle = taskTitle[0]; // Convert from Array to string.
 
             // Inject the value into the search box and submit the form.
-            window.open('https://helpdesk.alkamitech.com/Browse/' + taskTitle);
+            window.open('https://helpdesk.alkamitech.com/browse/' + taskTitle);
         });
 
         // Now lets make the title of each task open in a new window if the link is clicked.
-        jQuery('.ghx-key a').on('click', function() {
+        jQuery('.ghx-key a').on('click', function(e) {
             window.open('https://helpdesk.alkamitech.com' + $(this).attr('href'));
         });
     });
@@ -53,4 +57,3 @@ function clickLoading() {
 
 // Load the click listener.
 delayClickLoading();
-
