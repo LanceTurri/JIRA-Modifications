@@ -57,8 +57,7 @@ dd a[title="Displays issues which have been updated in the last day"] {
   display: none;
 }
 
-.ghx-type img,
-.ghx-priority img {
+.ghx-type img {
   display: none !important;
 }
 
@@ -263,10 +262,10 @@ dd a[title="Displays issues which have been updated in the last day"] {
  * Dark Theme - Mainly for the Agile board.
  *
  *******************************************************/
-/* Change the page font
+/* Change the page font */
 body {
-  font-family: "Open Sans", sans-serif !important;
-} */
+  font-family: "Roboto", Helvetica, sans-serif !important;
+}
 
 /* Background  and border colors */
 #ghx-pool,
@@ -365,4 +364,8 @@ body {
   margin-top: 15px;
   background: #cfcabc;
   border: none;
+}
+
+.ghx-column .ghx-issue.ghx-flagged {
+  background: #ffe9a8;
 }
