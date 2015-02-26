@@ -2,7 +2,7 @@
 // @name         JIRA Upgrades
 // @namespace    http://your.homepage/
 // @version      0.5
-// @description  To begin this will enable the clicking of a parent task to go straight to that task.
+// @description  Adding icons, new fonts, and allowing the click of a parent task / task to open a new tab.
 // @author       Lance Turri
 // @match        http*://helpdesk.alkamitech.com/secure/RapidBoard.jspa?*
 // @grant        none
@@ -31,7 +31,8 @@ jQuery(window).load(function () {
         jQuery('.ghx-type[title="Improvement"]').addClass('fa fa-fw fa-thumbs-up');
         jQuery('.ghx-type[title="Configuration Change"]').addClass('fa fa-fw fa-gear');
 
-        // On to the parent task search function. It's getting hot up in here!
+        // On to the parent task search function.
+        jQuery('.ghx-parent-stub').off('click');
         jQuery('.ghx-parent-stub').on('click', function (e) {
             // TODO: combine these tasks.
             var taskTitle = $(this).attr('title'); // Get title attribute
@@ -43,8 +44,9 @@ jQuery(window).load(function () {
         });
 
         // Now lets make the title of each task open in a new window if the link is clicked.
+        jQuery('.ghx-key a').off('click');
         jQuery('.ghx-key a').on('click', function (e) {
-            window.open('https://helpdesk.alkamitech.com' + $(this).attr('href'));
+            window.open('https://helpdesk.alkamitech.com' + $(this).attr('href'), '_blank');
             return false;
         });
     };

@@ -1,0 +1,26 @@
+/* URL's starting with https://helpdesk.alkamitech.com/ */
+
+/********************************************************
+ *
+ *  This is the stylesheet for your personal Dashboard
+ *
+ ********************************************************/
+
+body.page-type-dashboard {
+    background: #31353e;
+}
+#dashboard {
+    background: #292e34 !important;
+}
+#footer,
+#footer-logo {
+    background: #31353e !important;
+}
+
+.dashboard-item-header {
+    background: #31353e !important;
+}
+#issuetable,
+#issuetable tr {
+    background: #CFCABC !important;
+}

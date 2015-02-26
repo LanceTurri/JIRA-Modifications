@@ -1,0 +1,15 @@
+/* URL's starting with https://helpdesk.alkamitech.com/ */
+
+/*******************************************************
+ *
+ *  This is the stylesheet for your timesheet view
+ *
+ *******************************************************/
+
+.tempo .tempo-stalker-content.stalker-content.issue-header-content .aui-page-header {
+    background: #292e34;
+}
+
+.aui-button.aui-button-subtle {
+    background: #f2f2f2;
+}
