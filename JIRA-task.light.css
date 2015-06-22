@@ -1,0 +1,114 @@
+/* URL's starting with https://helpdesk.alkamitech.com/ */
+
+/*******************************************************
+ *
+ *  This is the stylesheet for your task / ticket view
+ *
+ *******************************************************/
+
+ /* Global */
+ .blender {
+  display: none !important;
+}
+
+/* Top header section */
+#stalker {
+  background: #464a53;
+  color: #f5f5f5;
+}
+
+.ka .issue-header .issue-header-content>.aui-page-header {
+  padding-top: 10px;
+}
+
+.aui-page-header-main h1 {
+  color: #f5f5f5;
+}
+
+.issue-header .command-bar .toolbar-group {
+  margin-bottom: 0;
+}
+
+/* Command Bar */
+.command-bar {
+  background-color: #464a53 !important;
+}
+
+/* Main Page sections */
+.issue-body-content {
+  padding: 20px 0 20px 20px !important;
+  position: relative !important;
+}
+
+
+.aui-item.issue-main-column {
+  width: 68% !important;
+}
+
+#attach-cat-help,
+.attach-cat-action,
+.issue-body-content .module>.mod-header .ops,
+.attach-cat-title {
+  background-color: transparent !important;
+}
+
+/* Section Headers */
+.issue-body-content .module>.mod-header {
+  background: none !important;
+  border-bottom: 1px solid #999999;
+}
+
+h2.toggle-title {
+  background-color: transparent !important;
+}
+
+.issue-body-content .module>.mod-header+.mod-content {
+  margin-top: 15px !important;
+}
+
+.attach-cat-container {
+  background: none !important;
+  border: 1px dashed #aaa !important;
+  margin-top: -1px;
+}
+
+.tabwrap>.tabs.horizontal {
+  padding: 0 !important;
+}
+
+#activitymodule .issuePanelWrapper {
+  background: #ffffff;
+}
+
+#activitymodule .tabs2 {
+  height: 42px !important;
+  line-height: 2;
+}
+
+#activitymodule .issuePanelWrapper {
+  padding: 10px 15px;
+}
+
+.aui-avatar-small .aui-avatar-inner img {
+  border-radius: 20px;
+}
+
+/* Sidebar Styles */
+#viewissuesidebar {
+  padding-left: 20px !important;
+  padding-right: 10px;
+  padding-top: 20px;
+  width: 30% !important;
+  position: absolute;
+  right: 0;
+  top: -20px;
+  bottom: -20px;
+}
+
+#viewissuesidebar h2.toggle-title {
+  color: #f5f5f5;
+}
+
+#viewissuesidebar .aui-badge {
+ color: inherit;
+}
