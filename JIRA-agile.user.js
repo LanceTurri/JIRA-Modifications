@@ -4,7 +4,8 @@
 // @version      0.5
 // @description  Adding icons, new fonts, and allowing the click of a parent task / task to open a new tab.
 // @author       Lance Turri
-// @match        http*://helpdesk.alkamitech.com/secure/RapidBoard.jspa?*
+// @match        http://helpdesk.alkamitech.com/secure/RapidBoard.jspa?*
+// @match        https://helpdesk.alkamitech.com/secure/RapidBoard.jspa?*
 // @grant        none
 // ==/UserScript==
 
