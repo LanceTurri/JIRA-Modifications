@@ -223,10 +223,15 @@ dd a[title="Displays issues which have been updated in the last day"] {
 }
 
 .ghx-issue.ghx-has-avatar .ghx-avatar img {
-  border: 1px solid rgba(40, 53, 62, 0.75);
+  border: 2px solid rgba(40, 53, 62, 0.75);
   border-radius: 30px;
+  transition: border-width .2s;
+  box-sizing: border-box;
 }
 
+.ghx-issue.ghx-has-avatar .ghx-avatar img:hover {
+  border-width: 0;
+}
 
 /*******************************************************
  *
@@ -332,7 +337,10 @@ body {
   color: #464a53;
 }
 
-
+/* The due date color, if there is no due date.  */
+.ghx-fa {
+  color: #666;
+}
 
 /* Change task flag colors on left */
 .ghx-grabber[style*="background-color:#cc0000;"] {
@@ -350,8 +358,6 @@ body {
 .ghx-grabber[style*="background-color:#eeeeee;"] {
   background-color: #f5f5f5 !important;
 }
-
-
 
 /* Change priority arrow icons color */
 
